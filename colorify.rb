@@ -1,14 +1,17 @@
 require 'chroma'
-require 'securerandom'
+require 'color-generator'
 require 'rmagick'
 require 'progressbar'
 
 $number_of_covers = ARGV[0].to_i
+$lightness = ARGV[1].to_f
+$saturation = ARGV[2].to_f
 $source_path = 'foobar.png'
 
 def random_pair_of_matching_colours
   random_palette = [:complement, :split_complement, :tetrad, :triad, :analogous, :monochromatic].sample
-  Chroma.paint(SecureRandom.hex(3)).palette.send(random_palette, as: :name).sample(2)
+  random_colour = ColorGenerator.new(saturation: $saturation, lightness: $lightness).create_hex
+  Chroma.paint(random_colour).palette.send(random_palette, as: :name).sample(2)
 end
 
 def generate_cover(path)
