@@ -6,8 +6,8 @@ To get this running, simply do the following:
 # Unless the covers directory already exists
 mkdir covers
 
-# This will generate a 100 Foobar covers in the covers directory, with lightness=l and saturation=s
-ruby colorify.rb 100 :l :s
+# Generate covers
+ruby colorify.rb :number_of_random_palettes :number_of_covers_per_palette [randomize_palette_model]
 ```
 
-This script depends on the `rmagick`, `chroma`, `progressbar` and `color-generator` gems.
+This script depends on the `rmagick`, and `progressbar` gems.
