@@ -1,0 +1,226 @@
+<html>
+	<link rel="stylesheet" href="skeleton.css">
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<style type="text/css">
+		circle.foobar {
+			fill: white;
+			stroke: black;
+			stroke-width: 18px;
+		}
+
+		rect.foobar {
+			fill: black;
+		}
+
+		.row {
+			display: block;
+		}
+
+		.main {
+			height: 73%;
+			position: relative;
+		}
+
+		.logo {
+			position: absolute;
+		  top: 50%;
+		  transform: translateY(-50%);
+		}
+
+		.navbar {
+			height: 11%;
+			padding: 2% 0;
+		}
+
+		.navbar a {
+			display: inline-block;
+			text-align: center;
+		}
+
+		.navbar div {
+			display: inline-block;
+		}
+
+		.navbar a:hover {
+			color: white;
+		}
+
+		.navbar a i {
+			display: inline-block;
+			font-size: 2.5em;
+			line-height: 2.5em;
+			vertical-align: middle;
+		}
+
+		i:hover {
+			color: white;
+		}
+
+		.soundcloud {
+			height: 12%;
+		}
+	</style>
+	<script type="text/javascript">
+		var colours = [
+		  { "logo_colour":"#286458", "background_colour":"#6ff277" },
+		  { "logo_colour":"#d1923c", "background_colour":"#ebede7" },
+		  { "logo_colour":"#eee5b6", "background_colour":"#c99072" },
+		  { "logo_colour":"#d2ebc0", "background_colour":"#a97367" },
+		  { "logo_colour":"#818471", "background_colour":"#bb8a65" },
+		  { "logo_colour":"#ead05a", "background_colour":"#281f28" },
+		  { "logo_colour":"#ddd1b1", "background_colour":"#a38968" },
+		  { "logo_colour":"#262a35", "background_colour":"#c71513" },
+		  { "logo_colour":"#4ca86d", "background_colour":"#5b2609" },
+		  { "logo_colour":"#232e1f", "background_colour":"#9b9033" },
+		  { "logo_colour":"#d48d3b", "background_colour":"#e6663c" },
+		  { "logo_colour":"#3b5450", "background_colour":"#3f0e27" },
+		  { "logo_colour":"#e85d4f", "background_colour":"#e7b349" },
+		  { "logo_colour":"#c7bf4b", "background_colour":"#392e31" },
+		  { "logo_colour":"#f0edd3", "background_colour":"#a7a798" },
+		  { "logo_colour":"#fef5c0", "background_colour":"#2a2930" },
+		  { "logo_colour":"#762d2c", "background_colour":"#22867a" },
+		  { "logo_colour":"#b9392c", "background_colour":"#eaa136" },
+		  { "logo_colour":"#492b50", "background_colour":"#cf3c50" },
+		  { "logo_colour":"#3199bf", "background_colour":"#ebc59d" },
+		  { "logo_colour":"#f9f9f4", "background_colour":"#d7b499" },
+		  { "logo_colour":"#1a85a4", "background_colour":"#266774" },
+		  { "logo_colour":"#6c6e9c", "background_colour":"#ae4043" },
+		  { "logo_colour":"#067e8d", "background_colour":"#b0d4ab" },
+		  { "logo_colour":"#5d5f5f", "background_colour":"#d37b45" },
+		  { "logo_colour":"#31867d", "background_colour":"#a4e5e8" },
+		  { "logo_colour":"#fcf5ad", "background_colour":"#046e5e" },
+		  { "logo_colour":"#cee1c0", "background_colour":"#26262c" },
+		  { "logo_colour":"#657252", "background_colour":"#937e51" },
+		  { "logo_colour":"#a89774", "background_colour":"#c0a766" },
+		  { "logo_colour":"#a7a64d", "background_colour":"#e3812e" },
+		  { "logo_colour":"#b7b768", "background_colour":"#b79f5e" },
+		  { "logo_colour":"#415e5f", "background_colour":"#121626" },
+		  { "logo_colour":"#f0eadc", "background_colour":"#1c808d" },
+		  { "logo_colour":"#0d324a", "background_colour":"#aac586" },
+		  { "logo_colour":"#1d385b", "background_colour":"#428687" },
+		  { "logo_colour":"#f46253", "background_colour":"#f7bf72" },
+		  { "logo_colour":"#179fc0", "background_colour":"#165863" },
+		  { "logo_colour":"#126478", "background_colour":"#ec4245" },
+		  { "logo_colour":"#7b9b65", "background_colour":"#554662" },
+		  { "logo_colour":"#cebb9b", "background_colour":"#e17f35" },
+		  { "logo_colour":"#6b222b", "background_colour":"#2f2739" },
+		  { "logo_colour":"#92b991", "background_colour":"#a4ae72" },
+		  { "logo_colour":"#e5b069", "background_colour":"#a5c4dc" },
+		  { "logo_colour":"#58a590", "background_colour":"#d3d9aa" },
+		  { "logo_colour":"#998a5e", "background_colour":"#a57e53" },
+		  { "logo_colour":"#221d29", "background_colour":"#d4d541" },
+		  { "logo_colour":"#cebeb0", "background_colour":"#cca791" },
+		  { "logo_colour":"#bec32f", "background_colour":"#e07c13" },
+		  { "logo_colour":"#b4b5bd", "background_colour":"#a8a1a5" },
+		  { "logo_colour":"#d1663b", "background_colour":"#e68a66" },
+		  { "logo_colour":"#b3ac6b", "background_colour":"#592e25" },
+		  { "logo_colour":"#f4f5f2", "background_colour":"#1f2e5d" },
+		  { "logo_colour":"#858f5a", "background_colour":"#db927f" },
+		  { "logo_colour":"#d6ca4d", "background_colour":"#1c3d5c" },
+		  { "logo_colour":"#d8cb90", "background_colour":"#466050" },
+		  { "logo_colour":"#112421", "background_colour":"#faf7e5" },
+		  { "logo_colour":"#8e4931", "background_colour":"#898a48" },
+		  { "logo_colour":"#3f3523", "background_colour":"#dabe37" },
+		  { "logo_colour":"#48352e", "background_colour":"#7e715a" },
+		  { "logo_colour":"#098c8d", "background_colour":"#ea8528" },
+		  { "logo_colour":"#54a643", "background_colour":"#102d38" },
+		  { "logo_colour":"#d7af8a", "background_colour":"#5e5e63" },
+		  { "logo_colour":"#602122", "background_colour":"#f56412" },
+		  { "logo_colour":"#b1c5d0", "background_colour":"#286495" },
+		  { "logo_colour":"#5e5a49", "background_colour":"#586863" },
+		  { "logo_colour":"#2faec7", "background_colour":"#19151f" },
+		  { "logo_colour":"#8dc8be", "background_colour":"#45b0da" },
+		  { "logo_colour":"#67544c", "background_colour":"#eebfa3" },
+		  { "logo_colour":"#c9cbca", "background_colour":"#0c1821" },
+		  { "logo_colour":"#21556d", "background_colour":"#a0e2e0" },
+		  { "logo_colour":"#cacb90", "background_colour":"#256866" },
+		  { "logo_colour":"#4d2415", "background_colour":"#4e2514" },
+		  { "logo_colour":"#eee4da", "background_colour":"#e48366" },
+		  { "logo_colour":"#60b988", "background_colour":"#e0733f" },
+		  { "logo_colour":"#f3f3e3", "background_colour":"#e7c28a" },
+		  { "logo_colour":"#a4d470", "background_colour":"#de4945" },
+		  { "logo_colour":"#ddc79f", "background_colour":"#383852" },
+		  { "logo_colour":"#c05558", "background_colour":"#50404e" },
+		  { "logo_colour":"#485928", "background_colour":"#1d2c42" },
+		  { "logo_colour":"#e0ce8a", "background_colour":"#60767d" },
+		  { "logo_colour":"#fa886b", "background_colour":"#a8efca" },
+		  { "logo_colour":"#28272f", "background_colour":"#e5c12a" },
+		  { "logo_colour":"#b3d7be", "background_colour":"#382e2e" },
+		  { "logo_colour":"#cc4251", "background_colour":"#fce99e" },
+		  { "logo_colour":"#1f1721", "background_colour":"#edd7aa" },
+		  { "logo_colour":"#610a41", "background_colour":"#094e49" },
+		  { "logo_colour":"#3a3d43", "background_colour":"#cdc28f" },
+		  { "logo_colour":"#601316", "background_colour":"#e8e1ae" },
+		  { "logo_colour":"#57588e", "background_colour":"#d0dee9" },
+		  { "logo_colour":"#77877d", "background_colour":"#7b312f" },
+		  { "logo_colour":"#c7324d", "background_colour":"#4b816d" },
+		  { "logo_colour":"#322f3e", "background_colour":"#4b9c92" },
+		  { "logo_colour":"#306661", "background_colour":"#072b2c" },
+		  { "logo_colour":"#78586b", "background_colour":"#ad9c2e" },
+		  { "logo_colour":"#947d55", "background_colour":"#def070" },
+		  { "logo_colour":"#f59e2c", "background_colour":"#3f4b42" },
+		  { "logo_colour":"#f0666c", "background_colour":"#c6cc59" },
+		  { "logo_colour":"#fcf117", "background_colour":"#dfcc7a" },
+		  { "logo_colour":"#cc6875", "background_colour":"#c1c581" }
+		]
+
+		window.onload = function() {
+			var random_palette = colours[Math.floor(Math.random() * colours.length)];
+			
+			document.querySelector('body').style.backgroundColor = random_palette['background_colour'];
+			document.querySelectorAll('i').forEach(function(icon) {
+				icon.style.color = random_palette['logo_colour'];			
+			})
+			document.querySelectorAll('rect').forEach(function(icon) {
+				icon.style.fill = random_palette['logo_colour'];
+			})
+			document.querySelectorAll('circle').forEach(function(icon) {
+				icon.style.stroke = random_palette['logo_colour'];
+				icon.style.fill = random_palette['background_colour'];
+			})
+		}
+	</script>
+	<body>
+		<div class='container'>
+			<div class='row navbar'>
+				<a class='offset-by-four one column' href="https://facebook.com/foobarmusic"><i class='fab fa-facebook-square'></i></a>
+				<div class='one-half column'></div>
+				<a class='one column' href="https://instagram.com/foobarmusic"><i class='fab fa-instagram'></i></a>
+				<a class='one column' href="https://"><i class='fab fa-spotify'></i></a>
+				<a class=' one column' href="https://soundcloud.com/foobarbeats"><i class='fab fa-soundcloud'></i></a>
+			</div>
+			<div class='row main'>
+				<div class='logo offset-by-three six columns'>
+					<svg viewbox="0 0 270 120">
+						<circle class='foobar' cx="60" cy="60" r="50"/>
+						<circle class='foobar' cx="210" cy="60" r="50"/>
+
+						<rect class='foobar' x="60" y="1" width="150" height="18"/>
+						<rect class='foobar' x="60" y="101" width="150" height="18"/>
+						<rect class='foobar' x="40" y="50" width="40" height="18">
+							<animateTransform attributeName="transform"
+				                    type="rotate"
+				                    from="35 60 60" to="395 60 60"
+				                    begin="0s" dur="8s"
+				                    repeatCount="indefinite"
+				          />
+						</rect>
+						<rect class='foobar' x="190" y="50" width="40" height="20">
+							<animateTransform
+							  attributeName="transform"
+				        type="rotate"
+				        from="35 210 60" to="395 210 60"
+				        begin="0s" dur="8s"
+				        repeatCount="indefinite"
+				      />
+						</rect>
+					</svg>
+				</div>	
+			</div>
+			<div class='row'>
+				<iframe class='soundcloud offset-by-three six columns' scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/528318816&auto_play=true&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"></iframe>
+			</div>
+		</div>
+	</body>
+</html>

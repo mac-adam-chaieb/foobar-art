@@ -1,38 +1,24 @@
 #!/usr/bin/env ruby
-require 'rmagick'
 require 'progressbar'
 require 'uri'
 require 'json'
 require 'net/http'
 require 'optparse'
-require 'fileutils'
 
-$number_of_covers_per_palette = 4
-$number_of_palettes = 1
+$number_of_pairs = 1
 $randomize_model = false
 $colormind_model_list_uri = URI.parse("http://colormind.io/list/")
 $colormind_random_palette_uri = URI.parse("http://colormind.io/api/")
 
-# bin/colorify --base-path [path] --output-directory [path] --number [number] [--randomize-model]
-options = { base_path: '', output_directory: '', number_of_palettes: 1, randomize_model: false }
 OptionParser.new do |opts|
-  opts.banner = "Usage: bin/colorify [options]"
-
-  opts.on("-b", "--base-path path", "Path of the base image") do |base_path|
-    $base_image = Magick::ImageList.new(base_path)
-  end
-
-  opts.on("-o", "--output-directory directory", "Directory to output generated images to") do |output_directory|
-    $output_directory = output_directory
-    FileUtils.mkdir_p $output_directory unless File.directory?($output_directory)
-  end
+  opts.banner = "Usage: bin/colour-pair-gen [options]"
 
   opts.on("-r", "--randomize-model", "Randomize the color models in ColorMind. Default: 'default' model") do |_|
     $randomize_model = true
   end
 
-  opts.on("-n", "--number-of-palettes n", "Number of palettes to generate covers from. Default: #{$number_of_palettes}") do |n|
-    $number_of_palettes = n.to_i
+  opts.on("-n", "--number-of-pairs n", "Number of pairs of colours to generate. Default: #{$number_of_pairs}") do |n|
+    $number_of_pairs = n.to_i
   end
 
   opts.on("-h", "--help", "Shows this message") do |_|
@@ -69,26 +55,22 @@ def random_palette
 end
 
 def pairs_from_random_palette
-  random_palette.permutation(2).to_a.sample($number_of_covers_per_palette)
+  random_palette.permutation(2).to_a.sample
 end
 
 def generate_cover(path, *pair_of_colours)
   $base_image.level_colors(*pair_of_colours).write(path)
 end
 
-binding.pry
+output = []
+puts "Generating #{$number_of_pairs} colour pairs..."
+progress = ProgressBar.create(total: $number_of_pairs, length: 100)
 
-
-puts "Generating #{$number_of_covers} Foobar covers..."
-progress = ProgressBar.create(total: $number_of_palettes * $number_of_covers_per_palette, length: 100)
-
-$number_of_palettes.times do |index|
+$number_of_pairs.times do |index|
   pairs = pairs_from_random_palette
-
-  pairs.each.with_index do |pair_of_colours, pair_index|
-    generate_cover(File.join($output_directory, "#{index}-#{pair_index}.png"), *pair_of_colours)
-    progress.increment
-  end
+  output << { logo_colour: pairs.first, background_colour: pairs.last }
+  progress.increment
 end
 
+puts output.to_json
 puts "Done."
