@@ -18,8 +18,13 @@
 		}
 
 		.main {
-			height: 73%;
+			height: 60%;
 			position: relative;
+		}
+
+		.email-form {
+			height: 8%;
+			margin-bottom: 0;
 		}
 
 		.logo {
@@ -34,6 +39,7 @@
 		}
 
 		.navbar a {
+			width: 25%;
 			display: inline-block;
 			text-align: center;
 		}
@@ -42,135 +48,137 @@
 			display: inline-block;
 		}
 
-		.navbar a:hover {
-			color: white;
-		}
-
 		.navbar a i {
 			display: inline-block;
-			font-size: 2.5em;
-			line-height: 2.5em;
+			font-size: 3em;
+			line-height: 3em;
 			vertical-align: middle;
 		}
 
-		i:hover {
+		.navbar a i:hover {
 			color: white;
 		}
 
 		.soundcloud {
-			height: 12%;
+			height: 120px;
 		}
 	</style>
 	<script type="text/javascript">
 		var colours = [
-		  { "logo_colour":"#286458", "background_colour":"#6ff277" },
-		  { "logo_colour":"#d1923c", "background_colour":"#ebede7" },
-		  { "logo_colour":"#eee5b6", "background_colour":"#c99072" },
-		  { "logo_colour":"#d2ebc0", "background_colour":"#a97367" },
-		  { "logo_colour":"#818471", "background_colour":"#bb8a65" },
-		  { "logo_colour":"#ead05a", "background_colour":"#281f28" },
-		  { "logo_colour":"#ddd1b1", "background_colour":"#a38968" },
-		  { "logo_colour":"#262a35", "background_colour":"#c71513" },
-		  { "logo_colour":"#4ca86d", "background_colour":"#5b2609" },
-		  { "logo_colour":"#232e1f", "background_colour":"#9b9033" },
-		  { "logo_colour":"#d48d3b", "background_colour":"#e6663c" },
-		  { "logo_colour":"#3b5450", "background_colour":"#3f0e27" },
-		  { "logo_colour":"#e85d4f", "background_colour":"#e7b349" },
-		  { "logo_colour":"#c7bf4b", "background_colour":"#392e31" },
-		  { "logo_colour":"#f0edd3", "background_colour":"#a7a798" },
-		  { "logo_colour":"#fef5c0", "background_colour":"#2a2930" },
-		  { "logo_colour":"#762d2c", "background_colour":"#22867a" },
-		  { "logo_colour":"#b9392c", "background_colour":"#eaa136" },
-		  { "logo_colour":"#492b50", "background_colour":"#cf3c50" },
-		  { "logo_colour":"#3199bf", "background_colour":"#ebc59d" },
-		  { "logo_colour":"#f9f9f4", "background_colour":"#d7b499" },
-		  { "logo_colour":"#1a85a4", "background_colour":"#266774" },
-		  { "logo_colour":"#6c6e9c", "background_colour":"#ae4043" },
-		  { "logo_colour":"#067e8d", "background_colour":"#b0d4ab" },
-		  { "logo_colour":"#5d5f5f", "background_colour":"#d37b45" },
-		  { "logo_colour":"#31867d", "background_colour":"#a4e5e8" },
-		  { "logo_colour":"#fcf5ad", "background_colour":"#046e5e" },
-		  { "logo_colour":"#cee1c0", "background_colour":"#26262c" },
-		  { "logo_colour":"#657252", "background_colour":"#937e51" },
-		  { "logo_colour":"#a89774", "background_colour":"#c0a766" },
-		  { "logo_colour":"#a7a64d", "background_colour":"#e3812e" },
-		  { "logo_colour":"#b7b768", "background_colour":"#b79f5e" },
-		  { "logo_colour":"#415e5f", "background_colour":"#121626" },
-		  { "logo_colour":"#f0eadc", "background_colour":"#1c808d" },
-		  { "logo_colour":"#0d324a", "background_colour":"#aac586" },
-		  { "logo_colour":"#1d385b", "background_colour":"#428687" },
-		  { "logo_colour":"#f46253", "background_colour":"#f7bf72" },
-		  { "logo_colour":"#179fc0", "background_colour":"#165863" },
-		  { "logo_colour":"#126478", "background_colour":"#ec4245" },
-		  { "logo_colour":"#7b9b65", "background_colour":"#554662" },
-		  { "logo_colour":"#cebb9b", "background_colour":"#e17f35" },
-		  { "logo_colour":"#6b222b", "background_colour":"#2f2739" },
-		  { "logo_colour":"#92b991", "background_colour":"#a4ae72" },
-		  { "logo_colour":"#e5b069", "background_colour":"#a5c4dc" },
-		  { "logo_colour":"#58a590", "background_colour":"#d3d9aa" },
-		  { "logo_colour":"#998a5e", "background_colour":"#a57e53" },
-		  { "logo_colour":"#221d29", "background_colour":"#d4d541" },
-		  { "logo_colour":"#cebeb0", "background_colour":"#cca791" },
-		  { "logo_colour":"#bec32f", "background_colour":"#e07c13" },
-		  { "logo_colour":"#b4b5bd", "background_colour":"#a8a1a5" },
-		  { "logo_colour":"#d1663b", "background_colour":"#e68a66" },
-		  { "logo_colour":"#b3ac6b", "background_colour":"#592e25" },
-		  { "logo_colour":"#f4f5f2", "background_colour":"#1f2e5d" },
-		  { "logo_colour":"#858f5a", "background_colour":"#db927f" },
-		  { "logo_colour":"#d6ca4d", "background_colour":"#1c3d5c" },
-		  { "logo_colour":"#d8cb90", "background_colour":"#466050" },
-		  { "logo_colour":"#112421", "background_colour":"#faf7e5" },
-		  { "logo_colour":"#8e4931", "background_colour":"#898a48" },
-		  { "logo_colour":"#3f3523", "background_colour":"#dabe37" },
-		  { "logo_colour":"#48352e", "background_colour":"#7e715a" },
-		  { "logo_colour":"#098c8d", "background_colour":"#ea8528" },
-		  { "logo_colour":"#54a643", "background_colour":"#102d38" },
-		  { "logo_colour":"#d7af8a", "background_colour":"#5e5e63" },
-		  { "logo_colour":"#602122", "background_colour":"#f56412" },
-		  { "logo_colour":"#b1c5d0", "background_colour":"#286495" },
-		  { "logo_colour":"#5e5a49", "background_colour":"#586863" },
-		  { "logo_colour":"#2faec7", "background_colour":"#19151f" },
-		  { "logo_colour":"#8dc8be", "background_colour":"#45b0da" },
-		  { "logo_colour":"#67544c", "background_colour":"#eebfa3" },
-		  { "logo_colour":"#c9cbca", "background_colour":"#0c1821" },
-		  { "logo_colour":"#21556d", "background_colour":"#a0e2e0" },
-		  { "logo_colour":"#cacb90", "background_colour":"#256866" },
-		  { "logo_colour":"#4d2415", "background_colour":"#4e2514" },
-		  { "logo_colour":"#eee4da", "background_colour":"#e48366" },
-		  { "logo_colour":"#60b988", "background_colour":"#e0733f" },
-		  { "logo_colour":"#f3f3e3", "background_colour":"#e7c28a" },
-		  { "logo_colour":"#a4d470", "background_colour":"#de4945" },
-		  { "logo_colour":"#ddc79f", "background_colour":"#383852" },
-		  { "logo_colour":"#c05558", "background_colour":"#50404e" },
-		  { "logo_colour":"#485928", "background_colour":"#1d2c42" },
-		  { "logo_colour":"#e0ce8a", "background_colour":"#60767d" },
-		  { "logo_colour":"#fa886b", "background_colour":"#a8efca" },
-		  { "logo_colour":"#28272f", "background_colour":"#e5c12a" },
-		  { "logo_colour":"#b3d7be", "background_colour":"#382e2e" },
-		  { "logo_colour":"#cc4251", "background_colour":"#fce99e" },
-		  { "logo_colour":"#1f1721", "background_colour":"#edd7aa" },
-		  { "logo_colour":"#610a41", "background_colour":"#094e49" },
-		  { "logo_colour":"#3a3d43", "background_colour":"#cdc28f" },
-		  { "logo_colour":"#601316", "background_colour":"#e8e1ae" },
-		  { "logo_colour":"#57588e", "background_colour":"#d0dee9" },
-		  { "logo_colour":"#77877d", "background_colour":"#7b312f" },
-		  { "logo_colour":"#c7324d", "background_colour":"#4b816d" },
-		  { "logo_colour":"#322f3e", "background_colour":"#4b9c92" },
-		  { "logo_colour":"#306661", "background_colour":"#072b2c" },
-		  { "logo_colour":"#78586b", "background_colour":"#ad9c2e" },
-		  { "logo_colour":"#947d55", "background_colour":"#def070" },
-		  { "logo_colour":"#f59e2c", "background_colour":"#3f4b42" },
-		  { "logo_colour":"#f0666c", "background_colour":"#c6cc59" },
-		  { "logo_colour":"#fcf117", "background_colour":"#dfcc7a" },
-		  { "logo_colour":"#cc6875", "background_colour":"#c1c581" }
+			{ "logo_colour": "#afbcb8", "background_colour": "#c19f98" },
+			{ "logo_colour": "#f5f6f6", "background_colour": "#95a4a1" },
+			{ "logo_colour": "#8cbb4b", "background_colour": "#232d44" },
+			{ "logo_colour": "#db361f", "background_colour": "#d6364a" },
+			{ "logo_colour": "#4e42a8", "background_colour": "#1d2a3d" },
+			{ "logo_colour": "#9f9970", "background_colour": "#86b0ac" },
+			{ "logo_colour": "#5b4039", "background_colour": "#fefdfc" },
+			{ "logo_colour": "#73a773", "background_colour": "#187a87" },
+			{ "logo_colour": "#5a7b8e", "background_colour": "#9a6c3a" },
+			{ "logo_colour": "#207390", "background_colour": "#90533c" },
+			{ "logo_colour": "#444918", "background_colour": "#5d7d78" },
+			{ "logo_colour": "#14566a", "background_colour": "#2f5e41" },
+			{ "logo_colour": "#261d27", "background_colour": "#44253b" },
+			{ "logo_colour": "#815124", "background_colour": "#a0d0bb" },
+			{ "logo_colour": "#46707f", "background_colour": "#4e7ec2" },
+			{ "logo_colour": "#811f23", "background_colour": "#dde4e2" },
+			{ "logo_colour": "#cfdae6", "background_colour": "#81775a" },
+			{ "logo_colour": "#b6c19d", "background_colour": "#8d6c40" },
+			{ "logo_colour": "#aea274", "background_colour": "#76a090" },
+			{ "logo_colour": "#f4da6e", "background_colour": "#90b9b7" },
+			{ "logo_colour": "#d0d2cc", "background_colour": "#9c934b" },
+			{ "logo_colour": "#312123", "background_colour": "#dbc88f" },
+			{ "logo_colour": "#b12f7b", "background_colour": "#98a581" },
+			{ "logo_colour": "#2b1715", "background_colour": "#dea8ad" },
+			{ "logo_colour": "#f1eded", "background_colour": "#70918b" },
+			{ "logo_colour": "#7a877d", "background_colour": "#5c8a91" },
+			{ "logo_colour": "#1faf7a", "background_colour": "#e1a118" },
+			{ "logo_colour": "#45b39c", "background_colour": "#66634a" },
+			{ "logo_colour": "#794213", "background_colour": "#2b2620" },
+			{ "logo_colour": "#944081", "background_colour": "#a37563" },
+			{ "logo_colour": "#89819a", "background_colour": "#c1c3af" },
+			{ "logo_colour": "#4e6d78", "background_colour": "#ec7e7f" },
+			{ "logo_colour": "#f2efeb", "background_colour": "#c7bd83" },
+			{ "logo_colour": "#eb5ed6", "background_colour": "#a38ca6" },
+			{ "logo_colour": "#e3a1d9", "background_colour": "#833a4e" },
+			{ "logo_colour": "#d47a1d", "background_colour": "#fcdb80" },
+			{ "logo_colour": "#f6f6f7", "background_colour": "#3c2e23" },
+			{ "logo_colour": "#3c3c41", "background_colour": "#5588b9" },
+			{ "logo_colour": "#dd522d", "background_colour": "#89a7aa" },
+			{ "logo_colour": "#f8f9fa", "background_colour": "#6c6f72" },
+			{ "logo_colour": "#ac8e53", "background_colour": "#f24bcc" },
+			{ "logo_colour": "#1b1922", "background_colour": "#895520" },
+			{ "logo_colour": "#60d09c", "background_colour": "#3f2a16" },
+			{ "logo_colour": "#986e4b", "background_colour": "#b0a4c5" },
+			{ "logo_colour": "#716850", "background_colour": "#d77021" },
+			{ "logo_colour": "#273b19", "background_colour": "#ab7406" },
+			{ "logo_colour": "#4a695c", "background_colour": "#7f7414" },
+			{ "logo_colour": "#7d88a6", "background_colour": "#6589a0" },
+			{ "logo_colour": "#fbfafb", "background_colour": "#f15a4a" },
+			{ "logo_colour": "#222e7c", "background_colour": "#4a6e87" },
+			{ "logo_colour": "#a08837", "background_colour": "#e9db83" },
+			{ "logo_colour": "#455448", "background_colour": "#654140" },
+			{ "logo_colour": "#ada472", "background_colour": "#acc012" },
+			{ "logo_colour": "#9fb5c0", "background_colour": "#de5b51" },
+			{ "logo_colour": "#e6ab24", "background_colour": "#d6483e" },
+			{ "logo_colour": "#cca916", "background_colour": "#917d97" },
+			{ "logo_colour": "#f5ce61", "background_colour": "#f8dfba" },
+			{ "logo_colour": "#a67238", "background_colour": "#e1bac1" },
+			{ "logo_colour": "#f5f4f4", "background_colour": "#b5c7be" },
+			{ "logo_colour": "#cd460c", "background_colour": "#baded9" },
+			{ "logo_colour": "#e6c465", "background_colour": "#648897" },
+			{ "logo_colour": "#382f22", "background_colour": "#35364f" },
+			{ "logo_colour": "#8a9f87", "background_colour": "#6f8aad" },
+			{ "logo_colour": "#1a171b", "background_colour": "#957f68" },
+			{ "logo_colour": "#f7f9f9", "background_colour": "#221d20" },
+			{ "logo_colour": "#28586c", "background_colour": "#d1bb62" },
+			{ "logo_colour": "#231733", "background_colour": "#d9ca96" },
+			{ "logo_colour": "#cf3b11", "background_colour": "#41773a" },
+			{ "logo_colour": "#62691b", "background_colour": "#a6bc92" },
+			{ "logo_colour": "#1bb0d1", "background_colour": "#1c212d" },
+			{ "logo_colour": "#97aa49", "background_colour": "#7193bd" },
+			{ "logo_colour": "#f9f9f9", "background_colour": "#768e91" },
+			{ "logo_colour": "#226d90", "background_colour": "#cb7246" },
+			{ "logo_colour": "#cec1b7", "background_colour": "#8e9196" },
+			{ "logo_colour": "#374842", "background_colour": "#844a3f" },
+			{ "logo_colour": "#1e2f3e", "background_colour": "#8c89b2" },
+			{ "logo_colour": "#15809c", "background_colour": "#cdcdc9" },
+			{ "logo_colour": "#aa766a", "background_colour": "#cbceaf" },
+			{ "logo_colour": "#d5c3ba", "background_colour": "#658e8c" },
+			{ "logo_colour": "#765f60", "background_colour": "#bec8c5" },
+			{ "logo_colour": "#c1c8e0", "background_colour": "#a7897f" },
+			{ "logo_colour": "#533b1c", "background_colour": "#6f8d89" },
+			{ "logo_colour": "#41d1ba", "background_colour": "#85472a" },
+			{ "logo_colour": "#a42622", "background_colour": "#6e9bb2" },
+			{ "logo_colour": "#577880", "background_colour": "#b1a1b3" },
+			{ "logo_colour": "#31274d", "background_colour": "#60705b" },
+			{ "logo_colour": "#783523", "background_colour": "#c0728a" },
+			{ "logo_colour": "#af8a42", "background_colour": "#d0cbc0" },
+			{ "logo_colour": "#dd6f9d", "background_colour": "#cf9f95" },
+			{ "logo_colour": "#943daa", "background_colour": "#b8b5c6" },
+			{ "logo_colour": "#558b72", "background_colour": "#d95621" },
+			{ "logo_colour": "#86bbb9", "background_colour": "#8f9ce7" },
+			{ "logo_colour": "#500f21", "background_colour": "#25829c" },
+			{ "logo_colour": "#542719", "background_colour": "#86a2a6" },
+			{ "logo_colour": "#eaeaeb", "background_colour": "#b33337" },
+			{ "logo_colour": "#58500d", "background_colour": "#8e3c4b" },
+			{ "logo_colour": "#874847", "background_colour": "#26182b" },
+			{ "logo_colour": "#f6a30d", "background_colour": "#2f2d17" },
+			{ "logo_colour": "#251d2b", "background_colour": "#959290" },
+			{ "logo_colour": "#f2c169", "background_colour":"#e17b48 " }
 		]
 
 		window.onload = function() {
 			var random_palette = colours[Math.floor(Math.random() * colours.length)];
 			
 			document.querySelector('body').style.backgroundColor = random_palette['background_colour'];
+			document.querySelector('.button-primary').style.backgroundColor = random_palette['logo_colour'];
+			document.querySelector('.button-primary').style.borderColor = random_palette['logo_colour'];
+			document.querySelector('.button-primary').style.color = random_palette['background_colour'];
 			document.querySelectorAll('i').forEach(function(icon) {
-				icon.style.color = random_palette['logo_colour'];			
+				icon.style.color = random_palette['logo_colour'];
+				icon.addEventListener('mouseover', function(event) {
+					event.target.color = 'white';
+				})
 			})
 			document.querySelectorAll('rect').forEach(function(icon) {
 				icon.style.fill = random_palette['logo_colour'];
@@ -185,9 +193,8 @@
 		<div class='container'>
 			<div class='row navbar'>
 				<a class='offset-by-four one column' href="https://facebook.com/foobarmusic"><i class='fab fa-facebook-square'></i></a>
-				<div class='one-half column'></div>
 				<a class='one column' href="https://instagram.com/foobarmusic"><i class='fab fa-instagram'></i></a>
-				<a class='one column' href="https://"><i class='fab fa-spotify'></i></a>
+				<a class='one column' href="https://open.spotify.com/artist/3WQn0qcpk7X310IlqcZWDy?si=vjVs--sPRQSIkF7uVUTFkQ"><i class='fab fa-spotify'></i></a>
 				<a class=' one column' href="https://soundcloud.com/foobarbeats"><i class='fab fa-soundcloud'></i></a>
 			</div>
 			<div class='row main'>
@@ -201,16 +208,16 @@
 						<rect class='foobar' x="40" y="50" width="40" height="18">
 							<animateTransform attributeName="transform"
 				                    type="rotate"
-				                    from="35 60 60" to="395 60 60"
+				                    from="0 60 59" to="360 60 59"
 				                    begin="0s" dur="8s"
 				                    repeatCount="indefinite"
 				          />
 						</rect>
-						<rect class='foobar' x="190" y="50" width="40" height="20">
+						<rect class='foobar' x="190" y="50" width="40" height="18">
 							<animateTransform
 							  attributeName="transform"
 				        type="rotate"
-				        from="35 210 60" to="395 210 60"
+				        from="0 210 59" to="360 210 59"
 				        begin="0s" dur="8s"
 				        repeatCount="indefinite"
 				      />
@@ -218,8 +225,12 @@
 					</svg>
 				</div>	
 			</div>
+			<form action="https://foobarmusic.us18.list-manage.com/subscribe/post?u=32c6cec487f96c5608ff25323&amp;id=09f96e1303" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate row email-form" target="_blank" novalidate>
+					<input type="email" value="" name="EMAIL" class="email offset-by-three four columns" id="mce-EMAIL" placeholder="Email" required>
+			    <input type="submit" value="Sign up" name="subscribe" id="mc-embedded-subscribe" class="button button-primary two columns">
+			</form>
 			<div class='row'>
-				<iframe class='soundcloud offset-by-three six columns' scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/528318816&auto_play=true&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"></iframe>
+				<iframe class='soundcloud offset-by-three six columns' scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/528318816&color=%23f5db98&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"></iframe>
 			</div>
 		</div>
 	</body>

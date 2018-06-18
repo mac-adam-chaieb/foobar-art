@@ -55,7 +55,7 @@ def random_palette
 end
 
 def pairs_from_random_palette
-  random_palette.permutation(2).to_a.sample
+  [random_palette[[0,1].sample], random_palette[[-1,-2].sample]]
 end
 
 def generate_cover(path, *pair_of_colours)
